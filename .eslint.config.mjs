@@ -10,7 +10,7 @@ export default tseslint.config(
 //https://typescript-eslint.io/getting-started/
 /** @type {import("eslint").Linter.Config} */
 const config = {
-  // @ts-ignore
+  // @ts-expect-ignore
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true

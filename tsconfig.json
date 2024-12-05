@@ -6,7 +6,7 @@
     "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
-    "moduleDetection": "auto",
+    "moduleDetection": "force",
     "isolatedModules": true,
     /* Strictness */
     "strict": true,
@@ -16,11 +16,11 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "ES2022"
+      "ES2022",
     ],
     "noEmit": true,
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "nodenext",
     "jsx": "preserve",
     "plugins": [
       {
@@ -37,20 +37,15 @@
     }
   },
   "include": [
-    "**/*.js",
-    "**/*.mjs",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".eslint.config.cjs",
-    ".eslint.config.mjs",
-    ".next/types/**/*.ts",
+    "**/*.js",
+    "**/*.mjs",
     "build/types/**/*.ts",
-    "next-env.d.ts",
-    "dist/types/**/*.ts"
-, "_deploy-gh-page.mjs"  ],
-  "exclude": [
+  "_deploy-gh-page.mjs" ],  
+"exclude": [
     "node_modules",
-    "dist",
-    ".next"
   ]
 }

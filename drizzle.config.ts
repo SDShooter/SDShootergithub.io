@@ -1,5 +1,5 @@
 import { type Config } from "drizzle-kit";
-import { string } from "zod";
+//import { string } from "zod";
 
 //import { env } from "~/env";
 
