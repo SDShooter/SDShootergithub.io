@@ -1,13 +1,20 @@
+// @ts-check
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config(
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
+);
+// can convert to ->eslint.config.js worth anything?
+//https://typescript-eslint.io/getting-started/
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  // @ts-ignore
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true
   },
-  "plugins": [
-    "@typescript-eslint",
-    "drizzle"
-  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
@@ -59,3 +66,8 @@ const config = {
   }
 }
 module.exports = config;
+
+
+
+
+
