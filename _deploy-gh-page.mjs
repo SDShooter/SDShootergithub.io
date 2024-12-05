@@ -1,12 +1,5 @@
 import ghpages from 'gh-pages';
 //var ghpages = require('gh-pages');
-
-
-if (process.env.NODE_ENV !== 'development') {
-    console.log('Skipping deploy on CI');
-    process.exit(0);
-}
-
 ghpages.publish(
     'build',
     {

@@ -1,12 +1,13 @@
 import { type Config } from "drizzle-kit";
+import { string } from "zod";
 
-import { env } from "~/env";
+//import { env } from "~/env";
 
 export default {
   schema: "./src/server/db/schema.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: env.DATABASE_URL,
+    url: process.env.DATABASE_URL ?? "",
   },
-  tablesFilter: ["SDShootergithub.io_*"],
+  tablesFilter: ["SDShootergithub_*"],
 } satisfies Config;

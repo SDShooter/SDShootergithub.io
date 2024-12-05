@@ -6,13 +6,8 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
-    distDir: 'dist',
+    distDir: 'build',
     reactStrictMode: true,
-    turbo: {
-        // Should be auto-detected, but needed for Vercel
-        // eslint-disable-next-line no-undef
-        //appDir: __dirnname,
-    }
 };
 
 export default config;
