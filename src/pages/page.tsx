@@ -1,7 +1,8 @@
-import PhysicsVideo from "~/components/PhysicsVideo.js";
+//import PhysicsVideo from "~/components/PhysicsVideo.js";
 
-export default async function Home() {
+import { NextPage } from "next";
 
+const  Page: NextPage = () => {
   return (
  
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
@@ -10,7 +11,7 @@ export default async function Home() {
             Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
           </h1>
           <div className="w-full max-w-3xl">
-          <PhysicsVideo/>
+          {/* <PhysicsVideo/> */}
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
            
@@ -23,3 +24,5 @@ export default async function Home() {
       </main>
   );
 }
+
+export default Page;

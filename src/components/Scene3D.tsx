@@ -24,7 +24,7 @@ function RotatingBox() {
     <Box 
       ref={meshRef} 
       args={[1, 1, 1]} 
-      scale={1.5}
+      scale={2}
     >
       <meshStandardMaterial 
         color="#4f46e5"
@@ -38,9 +38,9 @@ function RotatingBox() {
 // Create a client-side only version of the Scene component
 const Scene3DContent = () => {
   return (
-    <div className="w-full h-[500px]">
-      <Canvas 
-        camera={{ position: [3, 3, 3] }}
+    <div className="w-full h-[1000px]">
+      <Canvas className="canvas"  
+        camera={{ isPerspectiveCamera: true, scale: [1, 1, 1] , position: [1, 1, 1]}}
         dpr={[1, 2]}
         gl={{ 
           antialias: true,
@@ -83,5 +83,5 @@ const Scene3DContent = () => {
 // Export a dynamically loaded version that only renders on client
 export default dynamic(() => Promise.resolve(Scene3DContent), {
   ssr: false,
-  loading: () => <div className="w-full h-[500px] bg-gray-800" />
+  loading: () => <div className="w-full h-[1000px] bg-gray-800"></div>,
 });
