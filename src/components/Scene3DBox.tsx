@@ -12,7 +12,7 @@ import { EffectComposer, Bloom, DepthOfField, Noise, Vignette } from '@react-thr
 //import { BlendFunction, Resizer, KernelSize } from 'postprocessing';
 
 function ReflectiveSphere() {
-  const meshRef = useRef<Mesh>(null);
+  const meshRef = useRef<Mesh>(null!);
   
   useFrame((state, delta) => {
     if (meshRef.current) {
@@ -21,7 +21,7 @@ function ReflectiveSphere() {
   });
 
   return (
-    <Box ref={meshRef} castShadow position={[0, 2, 0]} scale={1000}>
+    <mesh ref={meshRef} castShadow position={[0, 2, 0]} scale={1000}>
       <sphereGeometry args={[2, 64, 64]} />
       <meshPhysicalMaterial 
         metalness={0.9}
@@ -31,7 +31,7 @@ function ReflectiveSphere() {
         clearcoatRoughness={0.1}
         color="#ffffff"
       />
-    </Box>
+    </mesh>
   );
 }
 
