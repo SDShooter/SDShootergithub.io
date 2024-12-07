@@ -2,6 +2,7 @@ import { useTexture } from "@react-three/drei";
 import { BackSide } from "three";
 
 export function Skybox() {
+  const assets = '/docs/assets';
   const [
     front,
     back,
@@ -10,12 +11,12 @@ export function Skybox() {
     right,
     left
   ] = useTexture([
-    '/textures/skybox/front.jpg',
-    '/textures/skybox/back.jpg',
-    '/textures/skybox/top.jpg',
-    '/textures/skybox/bottom.jpg',
-    '/textures/skybox/right.jpg',
-    '/textures/skybox/left.jpg'
+    `${assets}/textures/skybox/front.jpg`,
+    `${assets}/textures/skybox/back.jpg`,
+    `${assets}/textures/skybox/top.jpg`,
+    `${assets}/textures/skybox/bottom.jpg`,
+    `${assets}/textures/skybox/right.jpg`,
+    `${assets}/textures/skybox/left.jpg`
   ]);
 
   return (
