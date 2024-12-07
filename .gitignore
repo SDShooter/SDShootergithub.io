@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# vscode
+/.vscode
+
 # database
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
