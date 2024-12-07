@@ -2,7 +2,7 @@ import { useTexture } from "@react-three/drei";
 import { BackSide } from "three";
 
 export function Skybox() {
-  const assets = '/docs/assets';
+  const assets = '/assets';
   const [
     front,
     back,
