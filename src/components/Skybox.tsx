@@ -11,12 +11,12 @@ export function Skybox() {
     right,
     left
   ] = useTexture([
-    `${assets}/textures/skybox/front.jpg`,
-    `${assets}/textures/skybox/back.jpg`,
-    `${assets}/textures/skybox/top.jpg`,
-    `${assets}/textures/skybox/bottom.jpg`,
-    `${assets}/textures/skybox/right.jpg`,
-    `${assets}/textures/skybox/left.jpg`
+    `${assets}/front.jpg`,
+    `${assets}/back.jpg`,
+    `${assets}/top.jpg`,
+    `${assets}/bottom.jpg`,
+    `${assets}/right.jpg`,
+    `${assets}/left.jpg`
   ]);
 
   return (
