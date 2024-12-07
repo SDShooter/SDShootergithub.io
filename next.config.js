@@ -8,6 +8,7 @@ const config = {
     reactStrictMode: true,
     distDir : ".next" ,
     transpilePackages: ['three'],
+    //output: 'export',
     experimental: {
           
     }
