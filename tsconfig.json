@@ -2,8 +2,9 @@
   "compilerOptions": {
     /* Base Options: */
     "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
-    "target": "es2022",
+    "target": "ES2022",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -19,21 +20,15 @@
       "ES2022",
     ],
     "noEmit": true,
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [ {"name": "next"}],
     "incremental": true,
     /* Path Aliases */
-    "baseUrl": ".",
+     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./src/*"
-      ]
+      "~/*": ["./src/*"]
     }
   },
   "include": [
@@ -43,9 +38,9 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.mjs",
-    "build/types/**/*.ts",
-  "_deploy-gh-page.mjs" ],  
+    ".eslintrc.mjs",
+    ],  
 "exclude": [
-    "node_modules",
+     "node_modules",
   ]
 }
