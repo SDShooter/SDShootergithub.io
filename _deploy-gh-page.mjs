@@ -4,7 +4,8 @@ ghpages.publish(
     'build',
     {
         branch: 'gh-pages',
-        repo: 'https://github.com/SDShootergithub/SDShootergithub.github.io.git'
+        repo: 'https://github.com/SDShootergithub/SDShootergithub.github.io.git',
+        domain: 'https://bill.lowkeymg.com',
     },    
 ).then(() => {
     console.log('Deploy complete?');

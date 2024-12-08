@@ -6,7 +6,8 @@
 /** @type {import("next").NextConfig} */
 const config = {
     reactStrictMode: true,
-    distDir : ".next" ,
+    output: 'export',
+    //distDir : "dist" ,
     transpilePackages: ['three'],
     //output: 'export',
     experimental: {

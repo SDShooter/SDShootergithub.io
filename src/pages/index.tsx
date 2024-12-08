@@ -14,7 +14,7 @@ export default function Home() {
           href="/page3" 
           className="text-2xl font-bold hover:text-blue-500 transition-colors"
         >
-          Enter 3D Scene
+          Enter 3D Scene (a)
         </Link>
       </main>
     </>

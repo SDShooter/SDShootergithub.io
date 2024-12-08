@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     /* Base Options: */
+    //"outDir": "dist",
     "esModuleInterop": true,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true,
@@ -41,6 +42,5 @@
     ".eslintrc.mjs",
     ],  
 "exclude": [
-     "node_modules",
-  ]
+    "node_modules","out","dist"]
 }
