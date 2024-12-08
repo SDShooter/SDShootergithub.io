@@ -85,6 +85,9 @@ jobs:
           AUTH_DISCORD_SECRET=${{ secrets.AUTH_DISCORD_SECRET }} \n
           DATABASE_URL=${{ secrets.DATABASE_URL }} \n
           " >> .env 
+      - name: Copy images
+        run: |
+          cp -R ./src/public/ ./out/public
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
