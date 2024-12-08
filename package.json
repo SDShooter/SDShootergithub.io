@@ -13,7 +13,7 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "d": "gh-pages -d out",
-    "deploy": "next build && cp -R docs/assets ./out/assets/ && gh-pages -d out",
+    "deploy": "next build && cp -R public/ ./out/public/ && gh-pages -d out",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "lint": "next lint",

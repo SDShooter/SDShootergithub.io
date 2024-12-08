@@ -2,7 +2,7 @@ import { useTexture } from "@react-three/drei";
 import { RepeatWrapping, Vector2 } from "three";
 
 export function Floor() {
-  const texture = useTexture("/assets/grass.jpg", (texture) => {
+  const texture = useTexture("public/textures/grass.jpg", (texture) => {
     texture.wrapS = texture.wrapT = RepeatWrapping;
     texture.repeat.set(100, 100); // More repetitions for grass
   });
