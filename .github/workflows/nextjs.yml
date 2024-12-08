@@ -85,11 +85,12 @@ jobs:
           AUTH_DISCORD_SECRET=${{ secrets.AUTH_DISCORD_SECRET }} \n
           DATABASE_URL=${{ secrets.DATABASE_URL }} \n
           " >> .env 
-      - name: Copy images (until we move to cdn)
-        run: |
-          cp -R public/ ./out/public/
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Copy images (until we move to cdn)
+        run: |
+          mkdir -p ./out
+          cp -R public/ ./out/public/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
